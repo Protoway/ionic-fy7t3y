@@ -7,8 +7,8 @@ import { Chart } from 'chart.js'
   templateUrl: 'about.html'
 })
 export class AboutPage {
-  @ViewChild('barChart') barChart;
-    bars: any;
+  @ViewChild('fillChart') fillChart;
+  pie: any;
   colorArray: any;
   constructor(public navCtrl: NavController) {
 
@@ -18,14 +18,18 @@ export class AboutPage {
   }
 
   createBarChart() {
-    this.bars = new Chart(this.barChart.nativeElement, {
-      type: 'bar',
+    this.colorArray = [];
+    for (let i = 0; i < 3; i++) {
+    this.colorArray.push('#' + Math.floor(Math.random() * 16777215).toString(16));
+  }
+    this.pie = new Chart(this.fillChart.nativeElement, {
+      type: 'pie',
       data: {
-        labels: ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8'],
+        labels: ['Empty', 'Taken', 'Closed'],
         datasets: [{
           label: 'Viewers in millions',
-          data: [2.5, 3.8, 5, 6.9, 6.9, 7.5, 10, 17],
-          backgroundColor: 'rgb(38, 194, 129)', // array should have same number of elements as number of dataset
+          data: [33, 33, 34],
+          backgroundColor: this.colorArray, // array should have same number of elements as number of dataset
           borderColor: 'rgb(38, 194, 129)',// array should have same number of elements as number of dataset
           borderWidth: 1
         }]
