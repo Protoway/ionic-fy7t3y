@@ -3,10 +3,10 @@ import { NavController } from 'ionic-angular';
 import { Chart } from 'chart.js'
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-g17',
+  templateUrl: 'g17.html'
 })
-export class AboutPage {
+export class G17Page {
   @ViewChild('fillChart') fillChart;
   pie: any;
   colorArray: any;
