@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { G17Page } from '../pages/g17/g17';
+import { G16Page } from '../pages/g16/g16';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -11,6 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 @NgModule({
   declarations: [
     MyApp,
+    G17Page,
     G16Page,
     ContactPage,
     HomePage,
@@ -24,6 +26,7 @@ import { TabsPage } from '../pages/tabs/tabs';
   entryComponents: [
     MyApp,
     G17Page,
+    G16Page,
     ContactPage,
     HomePage,
     TabsPage
