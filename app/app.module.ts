@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 
 import { G17Page } from '../pages/g17/g17';
 import { G16Page } from '../pages/g16/g16';
+import { G16cPage } from '../pages/g16c/g16c';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -16,7 +17,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     G16Page,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    G16cPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     G16Page,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    G16cPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler}
