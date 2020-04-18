@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Chart } from 'chart.js'
+import { Chart } from 'chart.js';
+import {GraphBuilders} from '../../app/graph-builders';
 
 @Component({
   selector: 'page-g16nc',
@@ -8,15 +9,16 @@ import { Chart } from 'chart.js'
 })
 export class G16ncPage {
   @ViewChild('fillChart') fillChart;
-  pie: any;
-  colorArray: any;
+  private builder:GraphBuilders = new GraphBuilders();
+  colorArray: [5, 46, 23];
+  inputdata: [3, 5, 5]
   constructor(public navCtrl: NavController) {
 
   }
   ionViewDidEnter() {
-    this.createBarChart();
+    this.builder.createPieChart(this.colorArray, this.inputdata, this.fillChart);
   }
-
+  /*
   createBarChart() {
     this.colorArray = [];
     for (let i = 0; i < 3; i++) {
@@ -36,4 +38,5 @@ export class G16ncPage {
       }
     });
   }
+  */
 }
